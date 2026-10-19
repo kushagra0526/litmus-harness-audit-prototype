@@ -1,0 +1,2 @@
+{"tests_weak.py": {"gaps": ["case", "k_bounds"], "over_specified": ["test_tokenizer"]},
+ "tests_full.py": {"gaps": [], "over_specified": []}}

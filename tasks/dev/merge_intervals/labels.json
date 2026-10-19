@@ -1,0 +1,2 @@
+{"tests_weak.py": {"gaps": ["reversed", "touching", "contained"], "over_specified": []},
+ "tests_full.py": {"gaps": [], "over_specified": []}}

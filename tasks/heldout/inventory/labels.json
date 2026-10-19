@@ -1,0 +1,2 @@
+{"tests_weak.py": {"gaps": ["qty_zero", "idempotent", "exact_stock"], "over_specified": ["test_holds_listed", "test_hold_record"]},
+ "tests_full.py": {"gaps": [], "over_specified": []}}

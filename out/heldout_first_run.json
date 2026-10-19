@@ -1,0 +1,257 @@
+{
+ "totals": {
+  "planted_gaps": 8,
+  "gaps_found": 8,
+  "coverage_found": 4,
+  "unplanted_gap_reports": 0,
+  "over_specified": 4,
+  "over_found": 4,
+  "false_over": 0,
+  "fine_tests": 36,
+  "equivalent_survivors": 6,
+  "raw_survivors": 25,
+  "full_suite_gap_reports": 1,
+  "full_suite_false_over": 0,
+  "broken": 0
+ },
+ "rows": [
+  {
+   "task": "inventory",
+   "suite": "tests_weak.py",
+   "mutants": 32,
+   "kill_rate": 0.786,
+   "line_coverage": 0.944,
+   "planted": [
+    "exact_stock",
+    "idempotent",
+    "qty_zero"
+   ],
+   "found": [
+    "exact_stock",
+    "idempotent",
+    "qty_zero"
+   ],
+   "coverage_found": [
+    "idempotent"
+   ],
+   "unplanted_gap_lines": [],
+   "over_specified_flagged": {
+    "test_hold_record": [
+     "uses a private name (attribute or helper starting with _) that a correct solution may not have"
+    ],
+    "test_holds_listed": [
+     "asserts an order the spec leaves open"
+    ]
+   },
+   "equivalent": [
+    {
+     "line": 13,
+     "op": "0 -> 1"
+    },
+    {
+     "line": 13,
+     "op": "0 -> -1"
+    },
+    {
+     "line": 26,
+     "op": "delete statement"
+    },
+    {
+     "line": 27,
+     "op": "delete statement"
+    }
+   ],
+   "witnesses": {
+    "18": {
+     "op": "delete statement",
+     "case": "({'A': 4, 'B': 0}, [('reserve', 'h3', 'A', 3), ('reserve', 'h3', 'A', 3)])",
+     "reference": "[('ok', True), ('ok', True)]",
+     "candidate": "[('ok', True), ('ok', False)]"
+    },
+    "16": {
+     "op": "LtE -> Lt",
+     "case": "({'A': 1, 'B': 3}, [('reserve', 'h0', 'A', 0)])",
+     "reference": "[('raise', 'ValueError')]",
+     "candidate": "[('ok', True)]"
+    },
+    "19": {
+     "op": "return None",
+     "case": "({'A': 0, 'B': 1}, [('reserve', 'h1', 'B', 1), ('reserve', 'h1', 'A', 4)])",
+     "reference": "[('ok', True), ('ok', False)]",
+     "candidate": "[('ok', True), ('ok', None)]"
+    },
+    "20": {
+     "op": "Lt -> LtE",
+     "case": "({'A': 0, 'B': 1}, [('reserve', 'h0', 'B', 1)])",
+     "reference": "[('ok', True)]",
+     "candidate": "[('ok', False)]"
+    }
+   }
+  },
+  {
+   "task": "inventory",
+   "suite": "tests_full.py",
+   "mutants": 32,
+   "kill_rate": 1.0,
+   "line_coverage": 1.0,
+   "planted": [],
+   "found": [],
+   "coverage_found": [],
+   "unplanted_gap_lines": [],
+   "over_specified_flagged": {},
+   "equivalent": [
+    {
+     "line": 26,
+     "op": "delete statement"
+    },
+    {
+     "line": 27,
+     "op": "delete statement"
+    }
+   ],
+   "witnesses": {}
+  },
+  {
+   "task": "parse_duration",
+   "suite": "tests_weak.py",
+   "mutants": 39,
+   "kill_rate": 0.846,
+   "line_coverage": 0.857,
+   "planted": [
+    "empty",
+    "junk_between",
+    "uppercase"
+   ],
+   "found": [
+    "empty",
+    "junk_between",
+    "uppercase"
+   ],
+   "coverage_found": [
+    "empty",
+    "junk_between"
+   ],
+   "unplanted_gap_lines": [],
+   "over_specified_flagged": {
+    "test_garbage_message": [
+     "asserts the exact text of an error message; the spec only fixes the exception type"
+    ]
+   },
+   "equivalent": [],
+   "witnesses": {
+    "10": {
+     "op": "delete statement",
+     "case": "''",
+     "reference": "'raises ValueError'",
+     "candidate": "0"
+    },
+    "9": {
+     "op": "drop .lower()",
+     "case": "'9H'",
+     "reference": "32400",
+     "candidate": "'raises ValueError'"
+    },
+    "11": {
+     "op": "delete statement",
+     "case": "''",
+     "reference": "'raises ValueError'",
+     "candidate": "0"
+    },
+    "15": {
+     "op": "delete statement",
+     "case": "'x8D'",
+     "reference": "'raises ValueError'",
+     "candidate": "691200"
+    },
+    "16": {
+     "op": "delete statement",
+     "case": "'x8D'",
+     "reference": "'raises ValueError'",
+     "candidate": "691200"
+    }
+   }
+  },
+  {
+   "task": "parse_duration",
+   "suite": "tests_full.py",
+   "mutants": 39,
+   "kill_rate": 1.0,
+   "line_coverage": 1.0,
+   "planted": [],
+   "found": [],
+   "coverage_found": [],
+   "unplanted_gap_lines": [],
+   "over_specified_flagged": {},
+   "equivalent": [],
+   "witnesses": {}
+  },
+  {
+   "task": "top_k_words",
+   "suite": "tests_weak.py",
+   "mutants": 16,
+   "kill_rate": 0.625,
+   "line_coverage": 0.833,
+   "planted": [
+    "case",
+    "k_bounds"
+   ],
+   "found": [
+    "case",
+    "k_bounds"
+   ],
+   "coverage_found": [
+    "k_bounds"
+   ],
+   "unplanted_gap_lines": [],
+   "over_specified_flagged": {
+    "test_tokenizer": [
+     "uses a private name (attribute or helper starting with _) that a correct solution may not have"
+    ]
+   },
+   "equivalent": [],
+   "witnesses": {
+    "6": {
+     "op": "drop .lower()",
+     "case": "('Cat SUN', 4)",
+     "reference": "['cat', 'sun']",
+     "candidate": "['at']"
+    },
+    "12": {
+     "op": "delete statement",
+     "case": "('', -2)",
+     "reference": "'raises ValueError'",
+     "candidate": "[]"
+    },
+    "13": {
+     "op": "delete statement",
+     "case": "('', -2)",
+     "reference": "'raises ValueError'",
+     "candidate": "[]"
+    }
+   }
+  },
+  {
+   "task": "top_k_words",
+   "suite": "tests_full.py",
+   "mutants": 16,
+   "kill_rate": 0.938,
+   "line_coverage": 1.0,
+   "planted": [],
+   "found": [
+    "case"
+   ],
+   "coverage_found": [],
+   "unplanted_gap_lines": [],
+   "over_specified_flagged": {},
+   "equivalent": [],
+   "witnesses": {
+    "6": {
+     "op": "drop .lower()",
+     "case": "('Cat SUN', 4)",
+     "reference": "['cat', 'sun']",
+     "candidate": "['at']"
+    }
+   }
+  }
+ ]
+}

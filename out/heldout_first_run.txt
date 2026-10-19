@@ -1,0 +1,21 @@
+{
+ "planted_gaps": 8,
+ "gaps_found": 8,
+ "coverage_found": 4,
+ "unplanted_gap_reports": 0,
+ "over_specified": 4,
+ "over_found": 4,
+ "false_over": 0,
+ "fine_tests": 36,
+ "equivalent_survivors": 6,
+ "raw_survivors": 25,
+ "full_suite_gap_reports": 1,
+ "full_suite_false_over": 0,
+ "broken": 0
+}
+inventory        tests_weak.py  mutants  32 kill 0.79 cov 0.94 gaps ['exact_stock', 'idempotent', 'qty_zero']/['exact_stock', 'idempotent', 'qty_zero'] cov-found ['idempotent'] unplanted [] over ['test_hold_record', 'test_holds_listed'] equiv 4
+inventory        tests_full.py  mutants  32 kill 1.00 cov 1.00 gaps []/[] cov-found [] unplanted [] over [] equiv 2
+parse_duration   tests_weak.py  mutants  39 kill 0.85 cov 0.86 gaps ['empty', 'junk_between', 'uppercase']/['empty', 'junk_between', 'uppercase'] cov-found ['empty', 'junk_between'] unplanted [] over ['test_garbage_message'] equiv 0
+parse_duration   tests_full.py  mutants  39 kill 1.00 cov 1.00 gaps []/[] cov-found [] unplanted [] over [] equiv 0
+top_k_words      tests_weak.py  mutants  16 kill 0.62 cov 0.83 gaps ['case', 'k_bounds']/['case', 'k_bounds'] cov-found ['k_bounds'] unplanted [] over ['test_tokenizer'] equiv 0
+top_k_words      tests_full.py  mutants  16 kill 0.94 cov 1.00 gaps ['case']/[] cov-found [] unplanted [] over [] equiv 0
